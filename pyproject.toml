@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pip-template"
+version = "0.0.1"
+description = "A template for python projects"
+authors = [
+    {name = "Justin Ovens", email = "code@gotunix.net"}
+]
+maintainers = [
+    {name = "Justin Ovens", email = "code@gotunix.net"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = "AGPL-3.0"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/gotunix"
+Repository = "https://github.com/gotunix"
+
+[project.scripts]
+pip-template = "pip_template.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
