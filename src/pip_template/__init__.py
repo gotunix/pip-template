@@ -1,3 +1,5 @@
+"""Nothing to see here."""
+
 import importlib.metadata
 
 PROJECT = "pip_template"
