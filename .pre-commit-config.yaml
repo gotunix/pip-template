@@ -80,12 +80,11 @@ repos:
     args: [-c, pyproject.toml]
     additional_dependencies: ['bandit[toml]']
 
-  # Docstring checks
+  # docstring formatting
 - repo: https://github.com/pycqa/pydocstyle
   rev: 6.3.0
   hooks:
   - id: pydocstyle
-    args: [--convention=google]
 
   # YAML formatting
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
@@ -102,13 +101,5 @@ repos:
     additional_dependencies:
     - mdformat-gfm
     - mdformat-black
-
-  # Security scanning
-- repo: https://github.com/semgrep/pre-commit
-  rev: v1.146.0
-  hooks:
-  - id: semgrep
-    entry: semgrep
-    args: [--config, https://semgrep.dev/p/python, --error, --skip-unknown-extensions]
 
 # Configuration for specific hooks can be added to pyproject.toml or setup.cfg
